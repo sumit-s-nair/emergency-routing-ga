@@ -36,26 +36,32 @@ This project applies **metaheuristic optimization** techniques to dynamically ad
 
 ## Dataset Generation
 
-The dataset is generated using **OpenStreetMap (OSM)** through the `osmnx` Python library.  
-For validation, selective distances and travel times are also cross-checked using the **Google Maps API**.
+Real-world road networks from OpenStreetMap via `osmnx`.
 
-### Dataset Details
-- Each dataset represents a **city road network** (e.g., Koramangala, Bengaluru).
-- Each edge (road) contains:
-  - `From`, `To` → Node IDs representing intersections  
-  - `Distance (km)` → Actual road distance from OSM  
-  - `Traffic Weight (1–5)` → Synthetic factor representing congestion  
-  - `Travel Time` → Computed as:  
-    ```
-    TravelTime = Distance × (1 + 0.2 × Traffic)
-    ```
-- Final datasets are saved as:
-  ```
-  datasets/
-  ├── koramangala_routes.csv
-  ├── bangalore_city.csv
-  └── google_api_samples.csv
-  ```
+### Generate Datasets
+```powershell
+# Activate venv
+.\.venv\Scripts\Activate.ps1
+
+# Generate city networks
+python generate_dataset.py
+
+# Analyze results
+python analyze_datasets.py
+```
+
+### Cities Included
+- Koramangala, Indiranagar, Jayanagar (Bangalore)
+- Bangalore Central
+- Manhattan Midtown, Cambridge MA
+
+### Files Generated
+- `{city}_nodes.csv` — Node coordinates
+- `{city}_edges.csv` — Roads with distance, traffic, travel time
+- `{city}_graph.graphml` — Network graph
+- `datasets_summary.csv` — Overview
+- `results/dataset_statistics.csv` — Analysis
+- `results/datasets_table.tex` — LaTeX table for paper
   
 ---
 
