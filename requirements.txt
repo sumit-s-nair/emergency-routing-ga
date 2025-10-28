@@ -1,0 +1,15 @@
+# Core libraries for development and experiments
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+networkx>=3.1
+
+# For fetching OSM data
+osmnx>=1.4
+
+# Geospatial support
+geopandas>=0.14
+shapely>=2.0
+
+# Useful utilities
+tqdm>=4.65
