@@ -1,4 +1,5 @@
-"""Main runner for Emergency Routing GA experiments.
+"""
+Main runner for Emergency Routing GA experiments.
 
 Simple runner that calls all four GA variants and saves results.
 """
@@ -24,14 +25,14 @@ def run_all(problem=None, config=None):
 
 
 if __name__ == "__main__":
-    # Placeholder config until you implement the GAs
+    # Placeholder problem/config
     config = {"population": 100, "generations": 200}
     
     print("Running Emergency Routing GA variants...")
     results = run_all(problem=None, config=config)
     print(json.dumps(results, indent=2))
     
-    # Save results if pandas available
+    # Save results
     try:
         import pandas as pd
         from pathlib import Path

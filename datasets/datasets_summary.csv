@@ -1,0 +1,4 @@
+city,nodes,edges,avg_degree,is_strongly_connected,num_strongly_connected_components,description,place_query
+koramangala,683,1723,5.045387994143485,False,2,small_urban,"Koramangala, Bangalore, India"
+bangalore_central,153750,390679,5.0820032520325205,False,169,large_metropolitan,"Bangalore, Karnataka, India"
+cambridge_ma,1878,4205,4.4781682641107565,False,17,medium_mixed,"Cambridge, Massachusetts, USA"
