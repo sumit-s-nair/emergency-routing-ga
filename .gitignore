@@ -210,4 +210,3 @@ __marimo__/
 
 # Ignore large generated graph files (GraphML) which are large and not needed in git
 bangalore_central_graph.graphml
-results/*_graph.graphml
